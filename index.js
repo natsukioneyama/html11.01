@@ -84,7 +84,7 @@ const PROJECTS = {
     }
   ],
 
-  suzannekoller: [
+  sanstitle: [
   {
     src: "img/sanstitle/001/01.webp",
     title: "Tess Petronio",
@@ -101,6 +101,33 @@ const PROJECTS = {
     src: "img/sanstitle/001/03.webp",
     title: "Tess Petronio",
     line1: "Suzanne Koller",
+    line2: ""
+  }
+],
+
+numerochina: [
+  {
+    src: "img/numerochina/01/01.webp",
+    title: "NUMERO CHINA",
+    line1: "Carla Rossi",
+    line2: ""
+  },
+  {
+    src: "img/numerochina/01/02.webp",
+    title: "NUMERO CHINA",
+    line1: "Carla Rossi",
+    line2: ""
+  },
+  {
+    src: "img/numerochina/01/03.webp",
+    title: "NUMERO CHINA",
+    line1: "Carla Rossi",
+    line2: ""
+  },
+   {
+    src: "img/numerochina/01/04.webp",
+    title: "NUMERO CHINA",
+    line1: "Carla Rossi",
     line2: ""
   }
 ],
@@ -291,32 +318,6 @@ numeroswitzerland: [
   }
 ],
 
-numerochina: [
-  {
-    src: "img/numerochina/01/01.webp",
-    title: "NUMERO CHINA",
-    line1: "Carla Rossi",
-    line2: ""
-  },
-  {
-    src: "img/numerochina/01/02.webp",
-    title: "NUMERO CHINA",
-    line1: "Carla Rossi",
-    line2: ""
-  },
-  {
-    src: "img/numerochina/01/03.webp",
-    title: "NUMERO CHINA",
-    line1: "Carla Rossi",
-    line2: ""
-  },
-   {
-    src: "img/numerochina/01/04.webp",
-    title: "NUMERO CHINA",
-    line1: "Carla Rossi",
-    line2: ""
-  }
-],
 
 beautypapers: [
   {
