@@ -618,12 +618,13 @@ width: 100%;
   letter-spacing: .04em;
 }
 
-.gm-project-nav button{
+.gm-project-nav button {
   border: 0;
   background: transparent;
   color: #000;
   cursor: pointer;
   font: inherit;
+  padding: 8px 6px;
 }
 
 .gm-project-nav span{
@@ -719,7 +720,7 @@ width: 100%;
    ========================================= */
 .gm-view-toggle{
   position: fixed;
-  top: 20px;
+  top: 7px;
   right: 24px;
   z-index: 10001;
   display: flex;
@@ -746,7 +747,7 @@ width: 100%;
 
 @media (max-width: 768px){
   .gm-view-toggle{
-    top: 16px;
+    top: 7px;
     right: 16px;
     gap: 8px;
   }
