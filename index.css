@@ -1,5 +1,5 @@
 /* =========================
-   Base
+BASE
 ========================= */
 
 * {
@@ -17,7 +17,7 @@ body {
   font-family: "ivypresto-display", serif;
   font-weight: 300;
   font-style: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 img {
@@ -27,25 +27,11 @@ img {
   -webkit-touch-callout: none;
 }
 
-body,
-button,
-input,
-textarea,
-select,
-.biography,
-.bio-grid,
-.bio-column,
-.bio-column h3,
-.bio-column p
- {
-  letter-spacing: 0.05em;
-}
-
-
 
 /* =========================
 TOP BAR
 ========================= */
+
 .topbar {
   position: fixed;
   top: 0;
@@ -69,17 +55,15 @@ TOP BAR
   color: #111;
 }
 
-
 .topnav a:hover {
   text-decoration: underline;
 }
 
 
-
-
 /* =========================
 INFO HERO
 ========================= */
+
 .info-page {
   padding-top: clamp(30px, 6svh, 80px);
 }
@@ -91,7 +75,6 @@ INFO HERO
   margin: 0 auto;
   text-align: center;
   padding-bottom: calc(120px + env(safe-area-inset-bottom));
-
 }
 
 .info-hero {
@@ -107,7 +90,6 @@ INFO HERO
   display: block;
   margin: 0 auto;
 }
-
 
 .info-content {
   text-align: center;
@@ -125,14 +107,13 @@ INFO HERO
 }
 
 
-
 /* =========================
-SELECTED WORKS
+SELECTED WORKS INTRO
 ========================= */
 
 .selected-works-intro {
   width: 100%;
-  margin: 180px 0 0px;
+  margin: 180px 0 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -148,6 +129,7 @@ SELECTED WORKS
   height: 1px;
   background: #d9d9d9;
 }
+
 .selected-works-intro p {
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -158,10 +140,34 @@ SELECTED WORKS
 
 
 
-/* =========================
-FEATURED PROJECT GENERAL
-========================= */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+FEATURED PROJECT
+========================= */
 .featured-project {
   margin: 120px auto 200px;
   width: 100%;
@@ -172,7 +178,6 @@ FEATURED PROJECT GENERAL
   margin: 0 auto;
 }
 
-/* Main layout */
 .featured-project-main {
   display: grid;
   grid-template-columns: 360px 360px;
@@ -187,9 +192,9 @@ FEATURED PROJECT GENERAL
   max-width: 520px;
   white-space: nowrap;
   margin: 0;
+  margin-left: 100px;
   text-align: left;
   justify-self: start;
-  margin-left: 100px;
 }
 
 .featured-label {
@@ -218,7 +223,9 @@ FEATURED PROJECT GENERAL
   display: block;
 }
 
+
 /* Thumbnail slider */
+
 .featured-thumbs-slider {
   position: relative;
   margin: 70px auto 0;
@@ -245,11 +252,12 @@ FEATURED PROJECT GENERAL
   height: 300px;
   width: auto;
   flex-shrink: 0;
-  object-fit: cover;
   display: block;
 }
 
+
 /* Slider arrows */
+
 .featured-arrow {
   width: 8px;
   height: 8px;
@@ -267,6 +275,7 @@ FEATURED PROJECT GENERAL
 
 
 
+
 /* =========================
 FEATURED PROJECT AC
 ========================= */
@@ -279,8 +288,6 @@ FEATURED PROJECT AC
 }
 
 .featured-project-ac .featured-main-image {
-  grid-column: 2;
-  grid-row: 1;
   width: 280px;
 }
 
@@ -288,14 +295,12 @@ FEATURED PROJECT AC
   grid-column: 1;
   grid-row: 2;
   width: 280px;
-  margin-top: 0;
 }
 
 .featured-project-ac .featured-ac-image-right {
   grid-column: 2;
   grid-row: 2;
   width: 280px;
-  margin-top: 0;
 }
 
 .featured-project-ac .featured-ac-image img {
@@ -306,8 +311,6 @@ FEATURED PROJECT AC
 }
 
 .featured-project-ac .featured-project-text {
-  grid-column: 1;
-  grid-row: 1;
   margin-left: 60px;
   align-self: center;
   transform: translateY(10px);
@@ -316,15 +319,16 @@ FEATURED PROJECT AC
 
 
 
+
 /* =========================
 BIOGRAPHY
 ========================= */
+
 .biography {
   max-width: 1400px;
   margin: 100px 0 0;
   padding: 100px 72px 120px;
 }
-
 
 .bio-grid {
   display: grid;
@@ -358,21 +362,47 @@ BIOGRAPHY
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+/* Tablet biography */
 @media (min-width: 700px) and (max-width: 1100px) {
-
   .bio-grid {
-  grid-template-columns: 1.4fr 1.1fr 0.9fr 0.8fr;
-  gap: 36px;
+    grid-template-columns: 1.4fr 1.1fr 0.9fr 0.8fr;
+    gap: 36px;
+  }
 }
 
-}
 
-
-
-
+/* Mobile common */
 @media (max-width: 699px) {
-
-    .topbar {
+  .topbar {
     padding: 20px 18px;
   }
 
@@ -384,7 +414,6 @@ BIOGRAPHY
     font-size: 11px;
     letter-spacing: 0.04em;
   }
-
 
   .biography {
     margin-top: 200px;
@@ -405,16 +434,10 @@ BIOGRAPHY
     font-size: 18px;
     line-height: 1.45;
   }
-
 }
 
 
-
-
-/* =========================
-   Info Hero Responsive
-========================= */
-/* iPad portrait */
+/* Info hero: iPad portrait */
 @media (min-width: 900px) and (max-width: 1100px) and (orientation: portrait) and (max-aspect-ratio: 4 / 5) {
   .info-hero {
     width: 85%;
@@ -423,16 +446,15 @@ BIOGRAPHY
   }
 
   .info-hero img,
-  .hero-slide
-  {
+  .hero-slide {
     width: 100%;
   }
 
   .info-content {
-  padding-top: 0;
- }
+    padding-top: 0;
+  }
 
-   .info-content h1 {
+  .info-content h1 {
     margin-bottom: 6px;
   }
 
@@ -441,6 +463,8 @@ BIOGRAPHY
   }
 }
 
+
+/* Info hero: small tablet portrait */
 @media (min-width: 700px) and (max-width: 899px) and (orientation: portrait) and (max-aspect-ratio: 4 / 5) {
   .info-hero {
     width: 100%;
@@ -449,15 +473,15 @@ BIOGRAPHY
   }
 
   .info-hero img,
-   .hero-slide {
+  .hero-slide {
     width: 100%;
   }
 
   .info-content {
-  padding-top: 0;
- }
+    padding-top: 0;
+  }
 
-   .info-content h1 {
+  .info-content h1 {
     margin-bottom: 6px;
   }
 
@@ -466,22 +490,19 @@ BIOGRAPHY
   }
 }
 
-/* Mobile portrait */
-@media (min-width: 391px) and (max-width: 699px) and (orientation: portrait) and (max-aspect-ratio: 3 / 4)  {
-   .info-hero {
+
+/* Info hero: mobile portrait */
+@media (min-width: 391px) and (max-width: 699px) and (orientation: portrait) and (max-aspect-ratio: 3 / 4) {
+  .info-hero {
     width: 100%;
     max-width: 100%;
     margin: 20px auto 25px;
   }
 
-.info-hero img,
-.hero-slide {
-  width: min(90vw, 60svh, 880px);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
+  .info-hero img,
+  .hero-slide {
+    width: min(90vw, 60svh, 880px);
+  }
 
   .info-content {
     padding-top: 10px;
@@ -496,9 +517,9 @@ BIOGRAPHY
   }
 }
 
-/* iPhone SE */
-@media (max-width: 390px) and (orientation: portrait) and (max-aspect-ratio: 4 / 5) {
 
+/* Info hero: iPhone SE */
+@media (max-width: 390px) and (orientation: portrait) and (max-aspect-ratio: 4 / 5) {
   .info-hero {
     margin: 15px auto 20px;
   }
@@ -517,12 +538,7 @@ BIOGRAPHY
 }
 
 
-
-
-/* =========================
-MQ TOP BAR HIDDEN
-========================= */
-
+/* Topbar hidden state */
 @media (max-width: 768px) {
   .topbar {
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -536,12 +552,7 @@ MQ TOP BAR HIDDEN
 }
 
 
-
-
-/* =========================
-MQ FEATURED PROJECT
-========================= */
-
+/* Featured project: mobile / tablet */
 @media (max-width: 900px) {
   .featured-project {
     margin: 120px auto 140px;
@@ -556,16 +567,6 @@ MQ FEATURED PROJECT
     display: flex;
     flex-direction: column;
     gap: 18px;
-  }
-
-  .featured-main-image {
-    width: 100%;
-    display: block;
-  }
-
-  .featured-main-image img {
-    width: 100%;
-    display: block;
   }
 
   .featured-project-text {
@@ -584,45 +585,62 @@ MQ FEATURED PROJECT
     margin: 0;
   }
 
+  .featured-main-image {
+    width: 100%;
+    display: block;
+  }
+
+  .featured-main-image img {
+    width: 100%;
+    display: block;
+  }
+
   .featured-thumbs-slider {
     display: none;
   }
 
+  .featured-project-ac .featured-project-main {
+    align-items: stretch;
+  }
 
-  /* =========================
-MQ FEATURED PROJECT AC
-========================= */
+  .featured-project-ac .featured-main-image {
+    order: 2;
+    width: 100%;
+    align-self: stretch;
+  }
 
-.featured-project-ac .featured-project-main {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: stretch;
+  .featured-project-ac .featured-ac-image-left,
+  .featured-project-ac .featured-ac-image-right {
+    display: none;
+  }
 }
 
-.featured-project-ac .featured-project-text {
-  order: -1;
-  margin: 0;
-  max-width: none;
-  text-align: left;
-}
 
-.featured-project-ac .featured-main-image {
-  order: 2;
-  width: 100%;
-  align-self: stretch;
-}
 
-.featured-project-ac .featured-main-image img {
-  width: 100%;
-  display: block;
-}
 
-.featured-project-ac .featured-ac-image-left,
-.featured-project-ac .featured-ac-image-right {
-  display: none;
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* =========================
@@ -689,8 +707,8 @@ FEATURED LIGHTBOX
 }
 
 
+/* Featured lightbox: mobile / tablet */
 @media (max-width: 900px) {
-
   .featured-lightbox-prev,
   .featured-lightbox-next {
     display: none;
@@ -705,13 +723,5 @@ FEATURED LIGHTBOX
     top: 22px;
     right: 22px;
     font-size: 22px;
-  }
-
-  .featured-lightbox-prev {
-    left: 8px;
-  }
-
-  .featured-lightbox-next {
-    right: 8px;
   }
 }
