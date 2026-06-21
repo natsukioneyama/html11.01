@@ -245,6 +245,29 @@ featuredLightboxNext.addEventListener("click", () => {
   showFeaturedImage(featuredLightboxIndex + 1);
 });
 
+let lightboxTouchStartX = 0;
+let lightboxTouchEndX = 0;
+
+featuredLightbox.addEventListener("touchstart", (event) => {
+  lightboxTouchStartX = event.changedTouches[0].clientX;
+}, { passive: true });
+
+featuredLightbox.addEventListener("touchend", (event) => {
+  lightboxTouchEndX = event.changedTouches[0].clientX;
+
+  const swipeDistance = lightboxTouchEndX - lightboxTouchStartX;
+
+  if (Math.abs(swipeDistance) < 50) return;
+
+  if (swipeDistance < 0) {
+    showFeaturedImage(featuredLightboxIndex + 1);
+  } else {
+    showFeaturedImage(featuredLightboxIndex - 1);
+  }
+}, { passive: true });
+
+
+
 featuredLightbox.addEventListener("click", (event) => {
   if (event.target === featuredLightbox) {
     closeFeaturedLightbox();

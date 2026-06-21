@@ -690,6 +690,12 @@ FEATURED LIGHTBOX
 
 
 @media (max-width: 900px) {
+
+  .featured-lightbox-prev,
+  .featured-lightbox-next {
+    display: none;
+  }
+
   .featured-lightbox-image {
     max-width: 90vw;
     max-height: 78svh;
