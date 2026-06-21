@@ -665,9 +665,19 @@ RESPONSIVE
     max-width: calc(100vw - 8px);
   }
 
+
   .featured-thumbs-slider {
-    margin: 40px auto 0;
-    gap: 8px;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+  margin: 40px auto 0;
+  gap: 8px;
+  }
+
+  .featured-thumbs-slider img {
+   -webkit-user-drag: none;
+   user-select: none;
+   pointer-events: none;
   }
 
   .featured-arrow {

@@ -158,7 +158,7 @@ featuredTrack.addEventListener("touchend", (event) => {
 
   const swipeDistance = thumbTouchEndX - thumbTouchStartX;
 
-  if (Math.abs(swipeDistance) < 50) return;
+  if (Math.abs(swipeDistance) < 28) return;
 
   if (swipeDistance < 0) {
     featuredNext.click();
