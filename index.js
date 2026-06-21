@@ -37,19 +37,29 @@ document.querySelectorAll('img').forEach(img => {
 
 
 
-const topbar = document.querySelector('.topbar');
-const biography = document.querySelector('.biography');
-
-window.addEventListener('scroll', () => {
+ const topbar = document.querySelector('.topbar');
+ const biography = document.querySelector('.biography');
+ const selectedWorksIntro = document.querySelector('.selected-works-intro');
+ window.addEventListener('scroll', () => {
   if (!topbar || !biography || window.innerWidth > 768) return;
 
   const bioTop = biography.getBoundingClientRect().top;
 
   if (bioTop < 80) {
-    topbar.classList.add('topbar-hidden');
-  } else {
-    topbar.classList.remove('topbar-hidden');
+  topbar.classList.add('topbar-hidden');
+
+  if (selectedWorksIntro) {
+    selectedWorksIntro.classList.add('selected-works-hidden');
   }
+
+} else {
+  topbar.classList.remove('topbar-hidden');
+
+  if (selectedWorksIntro) {
+    selectedWorksIntro.classList.remove('selected-works-hidden');
+  }
+}
+
 });
 
 
