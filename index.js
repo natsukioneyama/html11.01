@@ -132,17 +132,21 @@ document.querySelectorAll(".featured-project").forEach((section) => {
     }, 600);
   });
 
-let touchStartX = 0;
-let touchEndX = 0;
+let thumbTouchStartX = 0;
+let thumbTouchEndX = 0;
 
 featuredTrack.addEventListener("touchstart", (event) => {
-  touchStartX = event.changedTouches[0].clientX;
+  if (window.innerWidth > 900) return;
+
+  thumbTouchStartX = event.changedTouches[0].clientX;
 }, { passive: true });
 
 featuredTrack.addEventListener("touchend", (event) => {
-  touchEndX = event.changedTouches[0].clientX;
+  if (window.innerWidth > 900) return;
 
-  const swipeDistance = touchEndX - touchStartX;
+  thumbTouchEndX = event.changedTouches[0].clientX;
+
+  const swipeDistance = thumbTouchEndX - thumbTouchStartX;
 
   if (Math.abs(swipeDistance) < 50) return;
 
@@ -220,78 +224,12 @@ imageItems.forEach((item) => {
   images[index] = img.src;
 });
 
-
-
-
-  section.querySelectorAll("[data-featured-index]").forEach((item) => {
+section.querySelectorAll("[data-featured-index]").forEach((item) => {
   item.addEventListener("click", (event) => {
-    if (window.innerWidth <= 900) {
-      event.preventDefault();
-      return;
-    }
-
     event.preventDefault();
     openFeaturedLightbox(images, Number(item.dataset.featuredIndex));
   });
 });
-
-const mainImageLink = section.querySelector(".featured-main-image");
-const mainImage = mainImageLink ? mainImageLink.querySelector("img") : null;
-
-if (mainImage) {
-  let mobileFeaturedIndex = 0;
-  let mobileTouchStartX = 0;
-  let mobileTouchEndX = 0;
-
-  function updateMobileFeaturedImage() {
-    if (window.innerWidth > 900) return;
-    if (!images[mobileFeaturedIndex]) return;
-
-    mainImage.src = images[mobileFeaturedIndex];
-  }
-
-  function showNextMobileImage() {
-    mobileFeaturedIndex++;
-
-    if (mobileFeaturedIndex >= images.length) {
-      mobileFeaturedIndex = 0;
-    }
-
-    updateMobileFeaturedImage();
-  }
-
-  function showPrevMobileImage() {
-    mobileFeaturedIndex--;
-
-    if (mobileFeaturedIndex < 0) {
-      mobileFeaturedIndex = images.length - 1;
-    }
-
-    updateMobileFeaturedImage();
-  }
-
-  mainImage.addEventListener("touchstart", (event) => {
-    mobileTouchStartX = event.changedTouches[0].clientX;
-  }, { passive: true });
-
-  mainImage.addEventListener("touchend", (event) => {
-    mobileTouchEndX = event.changedTouches[0].clientX;
-
-    const swipeDistance = mobileTouchEndX - mobileTouchStartX;
-
-    if (Math.abs(swipeDistance) < 50) return;
-
-    if (swipeDistance < 0) {
-      showNextMobileImage();
-    } else {
-      showPrevMobileImage();
-    }
-  }, { passive: true });
-
-  setInterval(() => {
-    showNextMobileImage();
-  }, 2500);
-}
 
 });
 
